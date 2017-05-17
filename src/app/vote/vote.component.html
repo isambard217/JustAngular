@@ -1,0 +1,17 @@
+<p>
+  vote works!
+</p>
+
+<div style="border: 2px solid blue; width:20px; height:20px;" class="pointer">
+      <i
+         class="glyphicon glyphicon-menu-up" 
+         [style.pointer]
+         (click)="onUp()">       
+      </i>
+          <span> {{ Counter + myVote }} </span>
+      <i
+         class="glyphicon glyphicon-menu-down" 
+         [class.pointer]
+         (click)="onDown()">
+     </i>
+</div>  
