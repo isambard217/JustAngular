@@ -35,7 +35,7 @@ export class TweetService {
                 twitterHandler : "aadsd",
                 totalLike: 0,
                 iLike: false
-              }, 
+              } 
        ];
 
   }

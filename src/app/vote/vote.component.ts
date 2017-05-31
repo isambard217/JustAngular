@@ -17,7 +17,7 @@ export class VoteComponent implements OnInit {
   @Input() voteCount = 10; // Total Count
   @Input() myVote = 0; // User's vote can be -1, 0, 1
 
-  @Output() vote = new EventEmitter();
+  @Output() onVote = new EventEmitter();
 
   Counter : number = 10;
 
@@ -28,11 +28,11 @@ export class VoteComponent implements OnInit {
   onUp() {
 
     if(this.myVote == 1)
-      return
+      return // finihses code block 
 
     ++this.myVote;
 
-    this.vote.emit({ userVote : this.myVote });
+   // this.onVote.emit({ userVote : this.myVote });
 
   }
 
@@ -43,7 +43,7 @@ export class VoteComponent implements OnInit {
 
     --this.myVote;
 
-    this.vote.emit({ userVote : this.myVote });
+    //this.onVote.emit({ userVote : this.myVote });
 
   }
 
