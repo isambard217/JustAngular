@@ -35,6 +35,4 @@ export class PipeComponent {
         releaseDate: new Date(2016, 3, 1)
 
     }
->>>>>>> 46240edf3d8fd203b3f63b7c356afd2384fc9b05
-
 }

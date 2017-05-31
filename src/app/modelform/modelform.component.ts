@@ -8,7 +8,7 @@ import { UsernameValidators } from '../Validators/UsernameValidators';
 
 
 @Component({
-    
+
     selector: 'signup-form',
     templateUrl: './modelform.component.html'
 })
@@ -18,12 +18,12 @@ export class ModelformComponent {
 
 
     constructor(fb: FormBuilder) {
+        
        this.form = fb.group({
 
-                username: ['', [ Validators.required, UsernameValidators.cannotContainSpace ]],
+                username: ['', [ Validators.required ]], //  UsernameValidators.cannotContainSpace
                 password: ['', Validators.required ]
         });
-
     }
 
    /* form = new FormControl({

@@ -1,20 +1,5 @@
-<<<<<<< HEAD
+
 import {Pipe, PipeTransform } from '@angular/core';
-
-
-@Pipe({ name: 'summary' })
-export class SummaryPipe implements PipeTransform{
-
-    transform(value: string, args: string[]) {
-
-        if(value)
-            return value.substring(0, 4) + " ... ";
-
-    }
-
-=======
-import { Pipe, PipeTransform } from '@angular/core';
-
 
 
 @Pipe({
@@ -49,7 +34,4 @@ export class SummaryPipe implements PipeTransform {
             //return value.substring(0,1) + " isambard's test ";
             return limit;
     }
-
-
->>>>>>> 46240edf3d8fd203b3f63b7c356afd2384fc9b05
 }

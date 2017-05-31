@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-=======
+
 // Third party  installs
 import { Component } from '@angular/core';
->>>>>>> 46240edf3d8fd203b3f63b7c356afd2384fc9b05
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { Component } from '@angular/core';
+
 
 // My Pipe
 import { SummaryPipe } from './pipe/summary.pipe';
-import { TweetService } from './tweet/tweet.service';
 
 //My Components
 import { TweetsComponent } from './tweet/tweets.component';
@@ -28,9 +25,7 @@ import { LoopComponent } from './loop/loop.component';
 
 @Component({
   selector: 'app-root',
-<<<<<<< HEAD
   templateUrl: './app.component.html',
-=======
   template: `
       <div style="border: 2px solid red;">
         App Component 
@@ -75,7 +70,6 @@ import { LoopComponent } from './loop/loop.component';
 
   `,
   //templateUrl: './app.component.html',
->>>>>>> 46240edf3d8fd203b3f63b7c356afd2384fc9b05
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -93,11 +87,7 @@ export class AppComponent {
       myVote: 0
   }
 
-<<<<<<< HEAD
   constructor (tweetService : TweetService) {
-=======
-  constructor(tweetService : TweetService ) {
->>>>>>> 46240edf3d8fd203b3f63b7c356afd2384fc9b05
 
     this.tweets = tweetService.getAll();
 
