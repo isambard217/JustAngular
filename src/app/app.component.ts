@@ -1,36 +1,36 @@
-import { TweetService } from './tweet/tweet.service';
-import { TweetComponent } from './tweet/tweet.component';
-import { Component } from '@angular/core';
-
 import {Http, Response} from '@angular/http';
-
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { Component } from '@angular/core';
+
+// My Pipe
+import { SummaryPipe } from './pipe/summary.pipe';
+import { TweetService } from './tweet/tweet.service';
+
+//My Components
+import { TweetsComponent } from './tweet/tweets.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 @Component({
   selector: 'app-root',
-  template: `
-      <div style="border: 2px solid red;">
-        App Component 
-        <div *ngFor="let tweet of tweets">
-          <app-tweet [data]="tweet"></app-tweet>
-        </div>
-      </div>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
   tweets: any[];
+  courses = [];
+
   title = 'app works!';
 
   post = {
+
       voteCount: 10,
       myVote: 0
   }
 
-  constructor(tweetService : TweetService ){
+  constructor (tweetService : TweetService) {
 
     this.tweets = tweetService.getAll();
 

@@ -1,16 +1,19 @@
+
 import { TweetService } from './../tweet.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // My Componets
-import { TweetComponent} from '../tweet.component';
+import { TweetsComponent} from '../tweets.component';
+import { TweetComponent } from './../singularTweet/tweet.component';
+
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [TweetComponent],
+  declarations: [TweetsComponent, TweetComponent],
   providers: [TweetService],
-  exports:[TweetComponent]
+  exports: [TweetComponent, TweetsComponent]
 })
 export class TweetModule { }
